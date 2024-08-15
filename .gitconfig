@@ -81,7 +81,7 @@
 	pr = prune -v
 	#############
 	ps = push
-	psf = push -force-with-lease
+	psf = push --force-with-lease
 	psu = push -u
 	pst = push --tags
 	#############
@@ -202,3 +202,6 @@
 	subrepo = !sh -c 'git filter-branch --prune-empty --subdirectory-filter $1 master' -
 	human = name-rev --name-only --refs=refs/heads/*
 	
+[push]
+	autoSetupRemote = true
+
